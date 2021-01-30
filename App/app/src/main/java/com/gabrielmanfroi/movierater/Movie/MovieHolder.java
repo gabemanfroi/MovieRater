@@ -1,4 +1,4 @@
-package com.gabrielmanfroi.movierater;
+package com.gabrielmanfroi.movierater.Movie;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,7 +7,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+import com.gabrielmanfroi.movierater.ItemClickListener;
+import com.gabrielmanfroi.movierater.R;
+
+public class MovieHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     ImageView mImageView;
     TextView mTitle, mDes;
@@ -15,7 +18,7 @@ public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickLis
     ItemClickListener itemClickListener;
 
 
-    public MyHolder(@NonNull View itemView){
+    public MovieHolder(@NonNull View itemView){
         super(itemView);
 
         this.mImageView = itemView.findViewById(R.id.imageIV);
@@ -36,7 +39,6 @@ public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickLis
     public void setItemClickListener(ItemClickListener ic){
         this.itemClickListener = ic;
     }
-
 
 
 }
